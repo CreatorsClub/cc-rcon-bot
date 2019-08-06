@@ -1,0 +1,11 @@
+{
+  "token": "Discord Bot Token",
+  "host": "Rust Server IP",
+  "port": 28016,
+  "password": "Rcon Password",
+  "serverInfoInterval": 300000,
+  "tryConnectionInterval": 300000,
+  "rconChannel": "Discord Channel ID",
+  "modRole": "Mod Role ID",
+  "adminRole":  "Admin Role ID"
+}
