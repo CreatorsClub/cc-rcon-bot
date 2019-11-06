@@ -33,7 +33,7 @@ rcon.on('message', function(msg){
       client.user.setActivity(`${onlinePlayers}/${maxPop} (${queuedPlayers} in queue)`, {type: 'PLAYING'});
     }
     else if (onlinePlayers < 20){
-      client.user.setActivity("Wipes Tuesday 2PM EST", {type: 'PLAYING'});
+      client.user.setActivity(options.defaultActivity, {type: 'PLAYING'});
     }
     else {
       client.user.setActivity(`${onlinePlayers}/${maxPop}`, {type: 'PLAYING'});
@@ -44,15 +44,15 @@ rcon.on('message', function(msg){
     messageToSend = message.message;
     if (messageToSend.length < 1994){
       if (messageToSend.length != 0) {
-        client.channels.get(options.rconChannel).send("```" + messageToSend.substring(0, 1994) + "```");
+        client.channels.get(options.reportChannel).send("```" + messageToSend.substring(0, 1994) + "```");
       }
     }
     else {
       while(messageToSend.length > 1994){
-        client.channels.get(options.rconChannel).send("```" + messageToSend.substring(0, 1994) + "```");
+        client.channels.get(options.reportChannel).send("```" + messageToSend.substring(0, 1994) + "```");
         messageToSend = messageToSend.substring(1994);
       }
-      client.channels.get(options.rconChannel).send("```" + messageToSend.substring(0, 1994) + "```");
+      client.channels.get(options.reportChannel).send("```" + messageToSend.substring(0, 1994) + "```");
 
     }
   }
