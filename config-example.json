@@ -5,7 +5,9 @@
   "password": "Rcon Password",
   "serverInfoInterval": 300000,
   "tryConnectionInterval": 300000,
+  "defaultActivity": "Default Discord Activity Message",
   "rconChannel": "Discord Channel ID",
   "modRole": "Mod Role ID",
-  "adminRole":  "Admin Role ID"
+  "adminRole":  "Admin Role ID",
+  "reportChannel": "Discord Channel ID"
 }
