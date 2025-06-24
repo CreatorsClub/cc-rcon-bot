@@ -69,7 +69,7 @@ function tryConnection()
   catch(e)
   {
     console.log('RCON unavailable');
-    setTimeout(tryConnection(), options.tryConnectionInterval);
+    setTimeout(tryConnection, options.tryConnectionInterval);
   }
 }
 
